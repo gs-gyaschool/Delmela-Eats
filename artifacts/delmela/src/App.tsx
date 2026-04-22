@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Coffee, MapPin, Clock, Phone, Menu as MenuIcon, X, Map, ChefHat, Instagram, ArrowRight } from "lucide-react";
 
 // Images (will use generated images)
-import heroBg from "@/assets/hero-interior.png";
+import heroBg from "@assets/Delmela_Cover_1776854833713.jpeg";
 import latteArt from "@/assets/latte-art.png";
 import waffleDish from "@/assets/waffle-dish.png";
 import riceBowl from "@/assets/rice-bowl.png";
