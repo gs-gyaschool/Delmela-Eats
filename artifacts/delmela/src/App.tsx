@@ -7,6 +7,20 @@ import latteArt from "@/assets/latte-art.png";
 import waffleDish from "@/assets/waffle-dish.png";
 import riceBowl from "@/assets/rice-bowl.png";
 import storefront from "@/assets/storefront.png";
+import saladsCover from "@assets/Salads_Cover_1776855273574.png";
+import riceBowlsCover from "@assets/Ricce_Bowls_Cover_1776855273574.png";
+import sandwichesCover from "@assets/Sandwiches_cover_1776855273575.png";
+import dessertsCover from "@assets/Deserts_Cover_1776855273572.png";
+import drinksCover from "@assets/Drinks_Cover_1776855273573.png";
+
+const CATEGORY_COVERS: Record<string, string> = {
+  "Breakfast": waffleDish,
+  "Salads": saladsCover,
+  "Rice Bowls": riceBowlsCover,
+  "Sandwiches & Wraps": sandwichesCover,
+  "Desserts": dessertsCover,
+  "Drinks & Extras": drinksCover,
+};
 
 const MENUS = {
   "Breakfast": [
@@ -236,10 +250,24 @@ export default function App() {
             </div>
 
             {/* Menu Items */}
-            <div className="bg-card p-6 md:p-8 rounded-3xl border border-card-border shadow-sm min-h-[400px]">
-              <div className="flex justify-between items-end mb-8 border-b border-border pb-4">
-                <h4 className="text-2xl md:text-3xl font-serif font-bold text-primary">{activeMenuCategory}</h4>
+            <div className="bg-card rounded-3xl border border-card-border shadow-sm min-h-[400px] overflow-hidden">
+              <div className="relative aspect-[16/7] md:aspect-[21/8] w-full overflow-hidden bg-muted">
+                <img
+                  key={activeMenuCategory}
+                  src={CATEGORY_COVERS[activeMenuCategory]}
+                  alt={`${activeMenuCategory} cover`}
+                  className="absolute inset-0 w-full h-full object-cover"
+                  loading="lazy"
+                />
+                {/* Warm cream wash to keep the light/warm palette */}
+                <div className="absolute inset-0 bg-gradient-to-t from-background/85 via-background/30 to-background/10"></div>
+                <div className="absolute inset-0 bg-secondary/10 mix-blend-multiply"></div>
+                <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
+                  <span className="inline-block text-secondary font-semibold tracking-widest uppercase text-xs mb-1">Category</span>
+                  <h4 className="text-3xl md:text-4xl font-serif font-bold text-primary drop-shadow-sm">{activeMenuCategory}</h4>
+                </div>
               </div>
+              <div className="p-6 md:p-8">
               <div className="grid md:grid-cols-2 gap-x-12 gap-y-8">
                 {MENUS[activeMenuCategory as keyof typeof MENUS].map((item, idx) => (
                   <div key={idx} className="group">
@@ -250,6 +278,7 @@ export default function App() {
                     <p className="text-sm text-foreground/70">{item.desc}</p>
                   </div>
                 ))}
+              </div>
               </div>
             </div>
           </div>
