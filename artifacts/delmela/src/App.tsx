@@ -322,7 +322,7 @@ export default function App() {
                   <Phone className="w-5 h-5 text-secondary shrink-0" />
                   +251 98 063 5959
                 </a>
-                <a href="https://www.google.com/maps?q=Summit+Feyele+Bet+Chanoly+Addis+Ababa" target="_blank" rel="noreferrer" className="text-accent font-semibold flex items-center gap-2 hover:gap-3 transition-all">
+                <a href="https://maps.app.goo.gl/zpKiSkseM8T4EhGY7" target="_blank" rel="noreferrer" className="text-accent font-semibold flex items-center gap-2 hover:gap-3 transition-all">
                   Get Directions <ArrowRight className="w-4 h-4" />
                 </a>
               </div>
@@ -355,7 +355,7 @@ export default function App() {
                   <Phone className="w-5 h-5 text-secondary shrink-0" />
                   +251 99 615 3422
                 </a>
-                <a href="https://www.google.com/maps?q=Tutto+Gelato+The+Nest+Residence+Sarbet+Addis+Ababa" target="_blank" rel="noreferrer" className="text-accent font-semibold flex items-center gap-2 hover:gap-3 transition-all">
+                <a href="https://maps.app.goo.gl/wMXEpFgJNcxYAXUQ8" target="_blank" rel="noreferrer" className="text-accent font-semibold flex items-center gap-2 hover:gap-3 transition-all">
                   Get Directions <ArrowRight className="w-4 h-4" />
                 </a>
               </div>
