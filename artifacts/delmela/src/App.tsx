@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Coffee, MapPin, Clock, Phone, Menu as MenuIcon, X, Map, ChefHat, Instagram, ArrowRight, MessageCircle } from "lucide-react";
-import { FaWhatsapp } from "react-icons/fa";
+import { Coffee, MapPin, Clock, Phone, Menu as MenuIcon, X, Map, ChefHat, Instagram, ArrowRight } from "lucide-react";
 
 // Images (will use generated images)
 import heroBg from "@/assets/hero-interior.png";
@@ -128,12 +127,12 @@ export default function App() {
             <button onClick={() => scrollTo('menu')} className="text-left font-medium text-lg py-2 text-foreground">Menu</button>
             <button onClick={() => scrollTo('locations')} className="text-left font-medium text-lg py-2 text-foreground">Locations</button>
             <button onClick={() => scrollTo('contact')} className="text-left font-medium text-lg py-2 text-foreground">Contact</button>
-            <div className="flex gap-4 pt-2">
-              <a href="tel:+251980635959" className="flex-1 bg-accent text-white text-center py-3 rounded-xl font-semibold flex items-center justify-center gap-2">
-                <Phone className="w-4 h-4" /> Call
+            <div className="flex flex-col gap-2 pt-2">
+              <a href="tel:+251980635959" className="bg-accent text-white text-center py-3 rounded-xl font-semibold flex items-center justify-center gap-2">
+                <Phone className="w-4 h-4" /> Summit · +251 98 063 5959
               </a>
-              <a href="https://wa.me/251980635959" target="_blank" rel="noreferrer" className="flex-1 bg-[#25D366] text-white text-center py-3 rounded-xl font-semibold flex items-center justify-center gap-2">
-                <FaWhatsapp className="w-5 h-5" /> WhatsApp
+              <a href="tel:+251996153422" className="bg-primary text-white text-center py-3 rounded-xl font-semibold flex items-center justify-center gap-2">
+                <Phone className="w-4 h-4" /> Sarbet · +251 99 615 3422
               </a>
             </div>
           </div>
@@ -161,11 +160,11 @@ export default function App() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="tel:+251980635959" className="bg-accent hover:bg-accent/90 text-white px-8 py-4 rounded-xl font-semibold flex items-center justify-center gap-2 transition-all shadow-lg hover:-translate-y-0.5">
-                <Phone className="w-5 h-5" /> Call Now
+              <a href="tel:+251980635959" className="bg-accent hover:bg-accent/90 text-white px-6 py-4 rounded-xl font-semibold flex items-center justify-center gap-2 transition-all shadow-lg hover:-translate-y-0.5">
+                <Phone className="w-5 h-5" /> Summit · +251 98 063 5959
               </a>
-              <a href="https://wa.me/251980635959" target="_blank" rel="noreferrer" className="bg-[#25D366] hover:bg-[#20bd5a] text-white px-8 py-4 rounded-xl font-semibold flex items-center justify-center gap-2 transition-all shadow-lg hover:-translate-y-0.5">
-                <FaWhatsapp className="w-5 h-5" /> WhatsApp Order
+              <a href="tel:+251996153422" className="bg-secondary hover:bg-secondary/90 text-primary px-6 py-4 rounded-xl font-semibold flex items-center justify-center gap-2 transition-all shadow-lg hover:-translate-y-0.5">
+                <Phone className="w-5 h-5" /> Sarbet · +251 99 615 3422
               </a>
               <button onClick={() => scrollTo('menu')} className="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-xl font-semibold flex items-center justify-center gap-2 transition-all">
                 View Menu <ArrowRight className="w-4 h-4" />
@@ -285,10 +284,14 @@ export default function App() {
                   <MapPin className="w-6 h-6 text-primary" />
                 </div>
                 <h4 className="text-2xl font-serif font-bold text-primary mb-3">Summit Location</h4>
-                <p className="text-foreground/80 mb-6 flex items-start gap-3">
+                <p className="text-foreground/80 mb-4 flex items-start gap-3">
                   <Map className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
                   Around Summit Feyele Bet next to Chanoly, Addis Ababa
                 </p>
+                <a href="tel:+251980635959" className="text-foreground/90 mb-6 flex items-center gap-3 font-medium hover:text-accent transition-colors">
+                  <Phone className="w-5 h-5 text-secondary shrink-0" />
+                  +251 98 063 5959
+                </a>
                 <a href="https://www.google.com/maps?q=Summit+Feyele+Bet+Chanoly+Addis+Ababa" target="_blank" rel="noreferrer" className="text-accent font-semibold flex items-center gap-2 hover:gap-3 transition-all">
                   Get Directions <ArrowRight className="w-4 h-4" />
                 </a>
@@ -314,10 +317,14 @@ export default function App() {
                   <MapPin className="w-6 h-6 text-primary" />
                 </div>
                 <h4 className="text-2xl font-serif font-bold text-primary mb-3">Sarbet Location</h4>
-                <p className="text-foreground/80 mb-6 flex items-start gap-3">
+                <p className="text-foreground/80 mb-4 flex items-start gap-3">
                   <Map className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
                   Across from Tutto Gelato, The Nest Residence, Addis Ababa
                 </p>
+                <a href="tel:+251996153422" className="text-foreground/90 mb-6 flex items-center gap-3 font-medium hover:text-accent transition-colors">
+                  <Phone className="w-5 h-5 text-secondary shrink-0" />
+                  +251 99 615 3422
+                </a>
                 <a href="https://www.google.com/maps?q=Tutto+Gelato+The+Nest+Residence+Sarbet+Addis+Ababa" target="_blank" rel="noreferrer" className="text-accent font-semibold flex items-center gap-2 hover:gap-3 transition-all">
                   Get Directions <ArrowRight className="w-4 h-4" />
                 </a>
@@ -349,9 +356,6 @@ export default function App() {
                 <a href="tel:+251980635959" className="w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors">
                   <Phone className="w-5 h-5" />
                 </a>
-                <a href="https://wa.me/251980635959" target="_blank" rel="noreferrer" className="w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors">
-                  <FaWhatsapp className="w-5 h-5" />
-                </a>
                 <a href="https://instagram.com/_delmela/" target="_blank" rel="noreferrer" className="w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors">
                   <Instagram className="w-5 h-5" />
                 </a>
@@ -364,7 +368,13 @@ export default function App() {
                 <li>
                   <a href="tel:+251980635959" className="flex items-center gap-3 hover:text-white transition-colors">
                     <Phone className="w-5 h-5 text-secondary" />
-                    +251 98 063 5959
+                    <span><strong className="block text-white text-sm font-medium">Summit</strong>+251 98 063 5959</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="tel:+251996153422" className="flex items-center gap-3 hover:text-white transition-colors">
+                    <Phone className="w-5 h-5 text-secondary" />
+                    <span><strong className="block text-white text-sm font-medium">Sarbet</strong>+251 99 615 3422</span>
                   </a>
                 </li>
                 <li>
@@ -404,20 +414,6 @@ export default function App() {
         </div>
       </footer>
 
-      {/* Floating WhatsApp Button */}
-      <a 
-        href="https://wa.me/251980635959" 
-        target="_blank" 
-        rel="noreferrer"
-        className="fixed bottom-6 right-6 w-16 h-16 bg-[#25D366] text-white rounded-full shadow-2xl flex items-center justify-center z-50 hover:scale-110 hover:-translate-y-1 transition-all duration-300"
-        aria-label="Order on WhatsApp"
-      >
-        <FaWhatsapp className="w-8 h-8" />
-        <span className="absolute -top-2 -right-2 flex h-4 w-4">
-          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
-          <span className="relative inline-flex rounded-full h-4 w-4 bg-white"></span>
-        </span>
-      </a>
     </div>
   );
 }
