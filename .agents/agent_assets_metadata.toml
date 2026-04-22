@@ -1,0 +1,32 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "WYSeKFfS8EhyHweknMwlF"
+uri = "file://artifacts/delmela/src/assets/hero-interior.png"
+type = "image"
+title = "Cafe interior morning light"
+
+[[generated]]
+id = "DEI6OoXlp0BinhEcVJo_R"
+uri = "file://artifacts/delmela/src/assets/latte-art.png"
+type = "image"
+title = "Latte art top down"
+
+[[generated]]
+id = "ZD2aW6tTS0GwrFRLr2h2G"
+uri = "file://artifacts/delmela/src/assets/waffle-dish.png"
+type = "image"
+title = "Plated waffle breakfast"
+
+[[generated]]
+id = "oYEV8kbZIfY3ld8Jr0U4A"
+uri = "file://artifacts/delmela/src/assets/rice-bowl.png"
+type = "image"
+title = "Styled rice bowl"
+
+[[generated]]
+id = "6--oyjTTwVGPeFx4MBav3"
+uri = "file://artifacts/delmela/src/assets/storefront.png"
+type = "image"
+title = "Cafe storefront exterior"
