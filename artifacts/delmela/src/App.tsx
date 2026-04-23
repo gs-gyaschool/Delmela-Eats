@@ -3,10 +3,10 @@ import { Coffee, MapPin, Clock, Phone, Menu as MenuIcon, X, Map, ChefHat, Instag
 
 // Images (will use generated images)
 import heroBg from "@assets/Delmela_Cover_1776854833713.jpeg";
-import latteArt from "@/assets/latte-art.png";
-import waffleDish from "@/assets/waffle-dish.png";
-import riceBowl from "@/assets/rice-bowl.png";
-import storefront from "@/assets/storefront.png";
+import latteArt from "@/assets/latte-art.webp";
+import waffleDish from "@/assets/waffle-dish.webp";
+import riceBowl from "@/assets/rice-bowl.webp";
+import storefront from "@/assets/storefront.webp";
 import breakfastCover from "@assets/Breakfasts_cover_1776855428091_optimized.webp";
 import saladsCover from "@assets/Salads_Cover_1776855273574_optimized.webp";
 import riceBowlsCover from "@assets/Ricce_Bowls_Cover_1776855273574_optimized.webp";
@@ -157,7 +157,7 @@ export default function App() {
       {/* Hero Section */}
       <section id="home" className="relative min-h-[90svh] flex items-center pt-20 pb-12">
         <div className="absolute inset-0 z-0">
-          <img src={heroBg} alt="Delmela Cafe Interior" className="w-full h-full object-cover" />
+          <img src={heroBg} alt="Delmela Cafe Interior" className="w-full h-full object-cover" loading="eager" fetchPriority="high" decoding="async" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent md:to-black/30"></div>
         </div>
         
@@ -195,10 +195,10 @@ export default function App() {
           <div className="grid md:grid-cols-2 gap-12 lg:gap-24 items-center">
             <div className="relative">
               <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
-                <img src={latteArt} alt="Beautiful Latte Art" className="w-full h-full object-cover" />
+                <img src={latteArt} alt="Beautiful Latte Art" className="w-full h-full object-cover" loading="lazy" decoding="async" />
               </div>
               <div className="absolute -bottom-6 -right-6 w-48 h-48 rounded-full border-4 border-background overflow-hidden hidden md:block shadow-xl">
-                <img src={waffleDish} alt="Waffle Dish" className="w-full h-full object-cover" />
+                <img src={waffleDish} alt="Waffle Dish" className="w-full h-full object-cover" loading="lazy" decoding="async" />
               </div>
             </div>
             <div>
@@ -366,7 +366,7 @@ export default function App() {
 
       {/* Image Banner */}
       <section className="h-[40vh] md:h-[60vh] w-full relative">
-        <img src={riceBowl} alt="Delmela Fresh Food" className="w-full h-full object-cover" />
+        <img src={riceBowl} alt="Delmela Fresh Food" className="w-full h-full object-cover" loading="lazy" decoding="async" />
         <div className="absolute inset-0 bg-primary/20"></div>
       </section>
 
