@@ -1,25 +1,19 @@
 import app from "./app";
 import { logger } from "./lib/logger";
 
-const rawPort = process.env["PORT"];
+// Vercel doesn't need to "listen" on a port, so we only do this locally
+if (process.env.NODE_ENV !== 'production') {
+  const rawPort = process.env["PORT"] || "3000"; // Default to 3000 if not set
+  const port = Number(rawPort);
 
-if (!rawPort) {
-  throw new Error(
-    "PORT environment variable is required but was not provided.",
-  );
-}
-
-const port = Number(rawPort);
-
-if (Number.isNaN(port) || port <= 0) {
-  throw new Error(`Invalid PORT value: "${rawPort}"`);
-}
-
-app.listen(port, (err) => {
-  if (err) {
-    logger.error({ err }, "Error listening on port");
-    process.exit(1);
+  if (Number.isNaN(port) || port <= 0) {
+    throw new Error(`Invalid PORT value: "${rawPort}"`);
   }
 
-  logger.info({ port }, "Server listening");
-});
+  app.listen(port, () => {
+    logger.info({ port }, "Server listening locally");
+  });
+}
+
+// THIS IS THE KEY: Vercel looks for this export to run your app
+export default app;
