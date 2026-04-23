@@ -297,18 +297,28 @@ export default function App() {
           <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
             {/* Summit */}
             <div className="bg-card rounded-3xl overflow-hidden border border-card-border shadow-sm group hover:shadow-md transition-shadow">
-              <div className="aspect-[16/9] w-full relative bg-muted">
-                <iframe 
-                  src="https://www.google.com/maps?q=Summit+Feyele+Bet+Chanoly+Addis+Ababa&output=embed" 
-                  width="100%" 
-                  height="100%" 
-                  style={{ border: 0 }} 
-                  allowFullScreen 
-                  loading="lazy" 
-                  referrerPolicy="no-referrer-when-downgrade"
-                  className="absolute inset-0"
-                ></iframe>
-              </div>
+              <a
+                href="https://maps.app.goo.gl/zpKiSkseM8T4EhGY7"
+                target="_blank"
+                rel="noreferrer"
+                className="aspect-[16/9] w-full relative bg-muted block group/map"
+                aria-label="Open Summit location in Google Maps"
+              >
+                <img
+                  src={storefront}
+                  alt="Map preview of Summit location"
+                  className="absolute inset-0 w-full h-full object-cover"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div className="absolute inset-0 bg-primary/30 group-hover/map:bg-primary/20 transition-colors"></div>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="bg-background/95 backdrop-blur-sm text-primary px-5 py-2.5 rounded-full font-medium text-sm flex items-center gap-2 shadow-md">
+                    <MapPin className="w-4 h-4" />
+                    Open in Google Maps
+                  </div>
+                </div>
+              </a>
               <div className="p-8">
                 <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-6">
                   <MapPin className="w-6 h-6 text-primary" />
@@ -330,18 +340,28 @@ export default function App() {
 
             {/* Sarbet */}
             <div className="bg-card rounded-3xl overflow-hidden border border-card-border shadow-sm group hover:shadow-md transition-shadow">
-              <div className="aspect-[16/9] w-full relative bg-muted">
-                <iframe 
-                  src="https://www.google.com/maps?q=Tutto+Gelato+The+Nest+Residence+Sarbet+Addis+Ababa&output=embed" 
-                  width="100%" 
-                  height="100%" 
-                  style={{ border: 0 }} 
-                  allowFullScreen 
-                  loading="lazy" 
-                  referrerPolicy="no-referrer-when-downgrade"
-                  className="absolute inset-0"
-                ></iframe>
-              </div>
+              <a
+                href="https://maps.app.goo.gl/wMXEpFgJNcxYAXUQ8"
+                target="_blank"
+                rel="noreferrer"
+                className="aspect-[16/9] w-full relative bg-muted block group/map"
+                aria-label="Open Sarbet location in Google Maps"
+              >
+                <img
+                  src={latteArt}
+                  alt="Map preview of Sarbet location"
+                  className="absolute inset-0 w-full h-full object-cover"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div className="absolute inset-0 bg-primary/30 group-hover/map:bg-primary/20 transition-colors"></div>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="bg-background/95 backdrop-blur-sm text-primary px-5 py-2.5 rounded-full font-medium text-sm flex items-center gap-2 shadow-md">
+                    <MapPin className="w-4 h-4" />
+                    Open in Google Maps
+                  </div>
+                </div>
+              </a>
               <div className="p-8">
                 <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-6">
                   <MapPin className="w-6 h-6 text-primary" />
