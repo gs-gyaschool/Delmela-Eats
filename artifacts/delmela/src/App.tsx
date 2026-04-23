@@ -7,12 +7,12 @@ import latteArt from "@/assets/latte-art.png";
 import waffleDish from "@/assets/waffle-dish.png";
 import riceBowl from "@/assets/rice-bowl.png";
 import storefront from "@/assets/storefront.png";
-import breakfastCover from "@assets/Breakfasts_cover_1776855428091.png";
-import saladsCover from "@assets/Salads_Cover_1776855273574.png";
-import riceBowlsCover from "@assets/Ricce_Bowls_Cover_1776855273574.png";
-import sandwichesCover from "@assets/Sandwiches_cover_1776855273575.png";
-import dessertsCover from "@assets/Deserts_Cover_1776855273572.png";
-import drinksCover from "@assets/Drinks_Cover_1776855273573.png";
+import breakfastCover from "@assets/Breakfasts_cover_1776855428091_optimized.webp";
+import saladsCover from "@assets/Salads_Cover_1776855273574_optimized.webp";
+import riceBowlsCover from "@assets/Ricce_Bowls_Cover_1776855273574_optimized.webp";
+import sandwichesCover from "@assets/Sandwiches_cover_1776855273575_optimized.webp";
+import dessertsCover from "@assets/Deserts_Cover_1776855273572_optimized.webp";
+import drinksCover from "@assets/Drinks_Cover_1776855273573_optimized.webp";
 
 const CATEGORY_COVERS: Record<string, string> = {
   "Breakfast": breakfastCover,
